@@ -1,0 +1,2686 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Globals",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "26270856df6402e2",
+        "type": "tab",
+        "label": "UI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "94d78d73abc80980",
+        "type": "tab",
+        "label": "Incoming Messages",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3e07c87d29dc14ad",
+        "type": "tab",
+        "label": "Handle Requests",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "42d923d8b21fcd62",
+        "type": "tab",
+        "label": "Deck Scan",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "36578b036ea1cf17",
+        "type": "tab",
+        "label": "Tray_Scan",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3cc20f02e8d2c2e6",
+        "type": "tab",
+        "label": "Load Tray",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "17d50da074fa0d1b",
+        "type": "tab",
+        "label": "Pick Seeds",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9b601b230aa127b3",
+        "type": "tab",
+        "label": "Drop Seeds",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c0b9cdec90bfaf5",
+        "type": "tab",
+        "label": "tcp tests",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "331ad38c4394de9c",
+        "type": "subflow",
+        "name": "plc in",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 560,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "ad348a4576b60be8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 280,
+            "y": 120,
+            "wires": [
+                {
+                    "id": "bdf6a1794fb0abfa",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "9027c4a0401aaf65",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "a119d14d560214f7",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "618dc0248fe69890",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 520,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "32e9f841561e5913",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "082f1d67afc93737",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 800,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "5832c22f28f8b166",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 940,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "04b734e37754ac59",
+        "type": "junction",
+        "z": "1c0b9cdec90bfaf5",
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "94e52ecd265d04fe"
+            ]
+        ]
+    },
+    {
+        "id": "e5c8447e200f995a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "bdf6a1794fb0abfa",
+        "type": "status",
+        "z": "331ad38c4394de9c",
+        "name": "",
+        "scope": null,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d260ef522b154577",
+        "type": "mqtt in",
+        "z": "331ad38c4394de9c",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e5c8447e200f995a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "ad348a4576b60be8"
+            ]
+        ]
+    },
+    {
+        "id": "ad348a4576b60be8",
+        "type": "function",
+        "z": "331ad38c4394de9c",
+        "name": "Save input to global state",
+        "func": "let helper = global.get('Helper')\nlet plc = global.get('plc');\n\nhelper.info(node, `Last message type received: ${msg.payload.tag}`);\nplc[msg.topic] = msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bbb1257c14e44885",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "0a28b14f10088e67"
+            ]
+        ]
+    },
+    {
+        "id": "0a28b14f10088e67",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Define helper functions",
+        "func": "const Helper = {\n    success: function (node, text) {\n        node.status({ fill: 'green', shape: 'dot', text: text });\n    },\n    info: function (node, text) {\n        node.status({ fill: 'blue', shape: 'dot', text: text });\n    },\n    warn: function (node, text) {\n        node.status({ fill: 'yellow', shape: 'dot', text: text });\n    },\n    error: function (node, text) {\n        node.status({ fill: 'red', shape: 'dot', text: text });\n    },\n    isnull: function (obj) {\n        return (obj == null || obj == undefined);\n    }\n}\n\nglobal.set(\"Helper\", Helper);\nnode.status({ fill: 'blue', shape: 'ring', text: 'OK' });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "c1f811a368770e03"
+            ]
+        ]
+    },
+    {
+        "id": "96e40890277f53e1",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Theme: Monokai",
+        "info": "In /data/settings.js look for editorTheme -> theme",
+        "x": 180,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c1f811a368770e03",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Define State class",
+        "func": "let helper = global.get('Helper');\nlet library = global.get(\"Library\") || {};\n\nclass State {\n    constructor() {\n        this.Deck_Scan = {\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n        this.Deck_Scan_Results = Array(32).fill('');\n\n        this.Tray_Scan = {\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n        this.Tray_Scan_Results = Array(25).fill('');\n\n        this.Load_Tray = {\n            Load_Slot: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Pick_Front = {\n            Tray_Area: -1,\n            Active_Nozzle: 0,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Pick_Rear = {\n            Tray_Area: -1,\n            Active_Nozzle: 0,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Drop_Front = {\n            Active_Nozzle: 0,\n            Destination: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        }\n\n        this.Drop_Rear = {\n            Active_Nozzle: 0,\n            Destination: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        }\n    }\n\n    toString() {\n        return {... this};\n    }\n}\n\nlibrary.State = State;\nglobal.set(\"Library\", library);\n\nhelper.info(node, 'State class setup okay');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "dcb63c8981afb6a8"
+            ]
+        ]
+    },
+    {
+        "id": "dcb63c8981afb6a8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Create global state",
+        "func": "let helper = global.get('Helper');\nhelper.info(node, 'Setting info status on current node');\n\nlet library = global.get(\"Library\");\nhelper.info(node, 'Library reference acquired');\n\nif (!library)\n{\n    helper.error(node, 'Failed to load class library');\n    return msg;\n}\nhelper.info(node, 'Class library loaded successfully');\n\n// Initialize the complex data structures we'll use\nglobal.set('state', new library.State());\n\nhelper.success(node, 'Global objects initialized');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "state",
+                "module": "state"
+            }
+        ],
+        "x": 350,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "367e87b6ce24e023",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "6fd0c03fdc403d83"
+            ]
+        ]
+    },
+    {
+        "id": "6fd0c03fdc403d83",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Reset global context",
+        "func": "global.set('Helper', undefined);\nglobal.set('Library', undefined);\nglobal.set('state', undefined);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5347bdd51002aad3",
+        "type": "uibuilder",
+        "z": "26270856df6402e2",
+        "name": "",
+        "topic": "",
+        "url": "plc",
+        "okToGo": true,
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "svelte-basic",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": true,
+        "sourceFolder": "dist",
+        "deployedVersion": "6.8.2",
+        "showMsgUib": false,
+        "title": "",
+        "descr": "",
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "24c0c155c9839d48",
+                "78622c9eb82e3206"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "24c0c155c9839d48",
+        "type": "debug",
+        "z": "26270856df6402e2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3ea911ea150b1fb3",
+        "type": "comment",
+        "z": "26270856df6402e2",
+        "name": "Restructure the MQTT messages [See inside]",
+        "info": "I think I should restructure the MQTT\nmessages to something like the following:\n\nplc\nplc/tray_scan\nplc/deck_scan\nplc/load_tray\nplc/pick_seeds\nplc/drop_seeds\n\nEach of the sub-categories would only\nhave messages related to that flow. For\ninstance, plc/tray_scan would have the\nfollowing messages:\n\n- plc/tray_scan/acknowledge\n- plc/tray_scan/complete\n- plc/tray_scan/request",
+        "x": 290,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d6e2869af76aa985",
+        "type": "comment",
+        "z": "26270856df6402e2",
+        "name": "Add the ability to communicate via TCP/IP from the PLC node to better emulate the actual hardware",
+        "info": "",
+        "x": 460,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2d7a4bab5bfd3ef8",
+        "type": "inject",
+        "z": "26270856df6402e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "state",
+        "payloadType": "global",
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "4518dffb417f6544"
+            ]
+        ]
+    },
+    {
+        "id": "78622c9eb82e3206",
+        "type": "function",
+        "z": "26270856df6402e2",
+        "name": "Update state from UI",
+        "func": "let state = global.get('state');\n\nlet newState = msg.payload;\n\nfor (let i = 0; i < 32; i++) {\n    let result = newState.Deck_Scan_Results[i];\n    if (result == undefined || result == null || result.trim() == '') {\n        result = '';\n    }    \n    state.Deck_Scan_Results[i] = result;\n}\n\nfor (let i = 0; i < 25; i++) {\n    let result = newState.Tray_Scan_Results[i];\n    if (result == undefined || result == null || result.trim() == '') {\n        result = '';\n    }    \n    state.Tray_Scan_Results[i] = result;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ebfb6d7554930d8d",
+        "type": "comment",
+        "z": "26270856df6402e2",
+        "name": "This won't work if we need a heartbeat, unless there is a separate push just for that",
+        "info": "",
+        "x": 470,
+        "y": 140,
+        "wires": [],
+        "icon": "font-awesome/fa-bug"
+    },
+    {
+        "id": "4518dffb417f6544",
+        "type": "rbe",
+        "z": "26270856df6402e2",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "5347bdd51002aad3"
+            ]
+        ]
+    },
+    {
+        "id": "c113b471685c62d5",
+        "type": "mqtt in",
+        "z": "94d78d73abc80980",
+        "name": "",
+        "topic": "plc/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e5c8447e200f995a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "e8a86c1f73f04280"
+            ]
+        ]
+    },
+    {
+        "id": "e8a86c1f73f04280",
+        "type": "function",
+        "z": "94d78d73abc80980",
+        "name": "Check for supported messages",
+        "func": "let supported = [\n    'Tray_Scan.Request',\n    'Tray_Scan.Acknowledge',\n\n    'Deck_Scan.Request',\n    'Deck_Scan.Acknowledge',\n\n    'Load_Tray.Load_Slot',\n    'Load_Tray.Request',\n    'Load_Tray.Acknowledge',\n\n    'Pick_Front.Tray_Area',\n    'Pick_Front.Active_Nozzle',\n    'Pick_Front.Request',\n    'Pick_Front.Acknowledge',\n\n    'Pick_Rear.Tray_Area',\n    'Pick_Rear.Active_Nozzle',\n    'Pick_Rear.Request',\n    'Pick_Rear.Acknowledge',\n\n    'Drop_Front.Destination',\n    'Drop_Front.Active_Nozzle',\n    'Drop_Front.Request',\n    'Drop_Front.Acknowledge',\n\n    'Drop_Rear.Destination',\n    'Drop_Rear.Active_Nozzle',\n    'Drop_Rear.Request',\n    'Drop_Rear.Acknowledge',\n];\n\nlet found = supported.find(item => item == msg.payload.tag);\n\nif (found) {\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "02fa3fa582ae47ba"
+            ]
+        ]
+    },
+    {
+        "id": "a75d62248093db60",
+        "type": "debug",
+        "z": "94d78d73abc80980",
+        "name": "Incoming Messages debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "02fa3fa582ae47ba",
+        "type": "function",
+        "z": "94d78d73abc80980",
+        "name": "Parse payload into state properties",
+        "func": "let helper = global.get('Helper');\nlet state = global.get('state');\n\nupdateState(msg.payload.tag, msg.payload.value);\n\nreturn msg;\n\n\nfunction updateState(tag, value) {\n    // Update the state object based on the tag\n    let keys = tag.split('.');\n    let currentState = state;\n    for (let j = 0; j < keys.length - 1; j++) {\n        currentState = currentState[keys[j]];\n    }\n\n    let propertyName = keys[keys.length - 1];\n    \n    if (!currentState.hasOwnProperty(propertyName)) {\n        helper.error(node, `Property not found in global state: ${tag}`);\n        return;\n    }\n    \n    currentState[propertyName] = value;\n    helper.info(node, `Property [${tag}] updated to ${value}`);\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 240,
+        "wires": [
+            [
+                "a75d62248093db60"
+            ]
+        ]
+    },
+    {
+        "id": "cf4afe3876b6dfdc",
+        "type": "comment",
+        "z": "94d78d73abc80980",
+        "name": "Update the global state based on incoming messages",
+        "info": "",
+        "x": 320,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2deeba60fc517a6d",
+        "type": "inject",
+        "z": "3e07c87d29dc14ad",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "5ce823953f1e74c9",
+                "53c74bd1b440a440",
+                "3130101f1fe24339",
+                "b19a0e9a45b58f11",
+                "8a6d68763eb79673",
+                "6437e912a92bde4d",
+                "f2db8ef95bd29406"
+            ]
+        ]
+    },
+    {
+        "id": "5ce823953f1e74c9",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Drop_Front.Request",
+        "property": "state.Drop_Front.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "461d8c447297633f"
+            ]
+        ]
+    },
+    {
+        "id": "53c74bd1b440a440",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Drop_Rear.Request",
+        "property": "state.Drop_Rear.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 540,
+        "wires": [
+            [
+                "42782ed4d7e661c3"
+            ]
+        ]
+    },
+    {
+        "id": "b19a0e9a45b58f11",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Pick_Front.Request",
+        "property": "state.Pick_Front.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "5a9d2d2123c1772f"
+            ]
+        ]
+    },
+    {
+        "id": "3130101f1fe24339",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Pick_Rear.Request",
+        "property": "state.Pick_Rear.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 440,
+        "wires": [
+            [
+                "c47d3664a221de73"
+            ]
+        ]
+    },
+    {
+        "id": "f2db8ef95bd29406",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Deck_Scan.Request",
+        "property": "state.Deck_Scan.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 240,
+        "wires": [
+            [
+                "8053d97d0ff14dcd"
+            ]
+        ]
+    },
+    {
+        "id": "8a6d68763eb79673",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Load_Tray.Request",
+        "property": "state.Load_Tray.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "a360cbfdecdce1d6"
+            ]
+        ]
+    },
+    {
+        "id": "6437e912a92bde4d",
+        "type": "switch",
+        "z": "3e07c87d29dc14ad",
+        "name": "Tray_Scan.Request",
+        "property": "state.Tray_Scan.Request",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "1bd68c36c298506c"
+            ]
+        ]
+    },
+    {
+        "id": "41b8ef221a93724d",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Deck Scan",
+        "mode": "link",
+        "links": [
+            "673a76edb4b49925"
+        ],
+        "x": 990,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8053d97d0ff14dcd",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Deck_Scan.Request flag",
+        "func": "let state = global.get('state');\nstate.Deck_Scan.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 240,
+        "wires": [
+            [
+                "41b8ef221a93724d"
+            ]
+        ]
+    },
+    {
+        "id": "1bd68c36c298506c",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Tray_Scan.Request flag",
+        "func": "let state = global.get('state');\nstate.Tray_Scan.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 280,
+        "wires": [
+            [
+                "5ba10cbf7a0f7acb"
+            ]
+        ]
+    },
+    {
+        "id": "a360cbfdecdce1d6",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Load_Tray.Request flag",
+        "func": "let state = global.get('state');\nstate.Load_Tray.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 340,
+        "wires": [
+            [
+                "b075ebe43837edb1"
+            ]
+        ]
+    },
+    {
+        "id": "5a9d2d2123c1772f",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Pick_Front.Request flag",
+        "func": "let state = global.get('state');\nstate.Pick_Front.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 400,
+        "wires": [
+            [
+                "7290600829dd1bcb"
+            ]
+        ]
+    },
+    {
+        "id": "c47d3664a221de73",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Pick_Rear.Request flag",
+        "func": "let state = global.get('state');\nstate.Pick_Rear.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 440,
+        "wires": [
+            [
+                "061cfef30a89e19f"
+            ]
+        ]
+    },
+    {
+        "id": "461d8c447297633f",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Drop_Front.Request flag",
+        "func": "let state = global.get('state');\nstate.Drop_Front.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 500,
+        "wires": [
+            [
+                "2f0966d2dcef0494"
+            ]
+        ]
+    },
+    {
+        "id": "42782ed4d7e661c3",
+        "type": "function",
+        "z": "3e07c87d29dc14ad",
+        "name": "Clear Drop_Rear.Request flag",
+        "func": "let state = global.get('state');\nstate.Drop_Rear.Request = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 540,
+        "wires": [
+            [
+                "572d72dfc9695cde"
+            ]
+        ]
+    },
+    {
+        "id": "5ba10cbf7a0f7acb",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Tray Scan",
+        "mode": "link",
+        "links": [
+            "b012fbeafcb60f5c",
+            "a3e539314bdd7766"
+        ],
+        "x": 980,
+        "y": 280,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "b075ebe43837edb1",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Load Tray",
+        "mode": "link",
+        "links": [
+            "3fc2e96d690fc2d7"
+        ],
+        "x": 980,
+        "y": 340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7290600829dd1bcb",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Pick Front",
+        "mode": "link",
+        "links": [
+            "fb5e1b1f35bbf64b"
+        ],
+        "x": 980,
+        "y": 400,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "061cfef30a89e19f",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Pick Rear",
+        "mode": "link",
+        "links": [
+            "544f93d736528616"
+        ],
+        "x": 980,
+        "y": 440,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2f0966d2dcef0494",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Drop Front",
+        "mode": "link",
+        "links": [
+            "1358cbe3cb36e1c6"
+        ],
+        "x": 990,
+        "y": 500,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "572d72dfc9695cde",
+        "type": "link out",
+        "z": "3e07c87d29dc14ad",
+        "name": "Drop Rear",
+        "mode": "link",
+        "links": [
+            "44c3d9465573a9d2"
+        ],
+        "x": 990,
+        "y": 540,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "414b2b74203b5ce8",
+        "type": "comment",
+        "z": "3e07c87d29dc14ad",
+        "name": "Check the global state to see if a request has been made",
+        "info": "",
+        "x": 310,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c4b3e92b462d84ed",
+        "type": "function",
+        "z": "42d923d8b21fcd62",
+        "name": "Gather info from PLC state and send the results",
+        "func": "let helper = global.get('Helper');\nlet state = global.get('state');\nlet numberOfMessages = flow.get('numberOfMessages');\n\nlet response = [];\n\nlet modified = translate(state.Deck_Scan_Results);\n\nfor (let i = 0; i < numberOfMessages; i++) {\n    let result = modified[i];\n\n    if (result == undefined || result == null || result.trim() == '') {\n        result = 'NOSCAN';\n    }\n\n    response.push({\n        tag: `Deck_Scan_Results[${i}]`,\n        value: result\n    });\n}\nmsg.payload = response;\n\nreturn msg;\n\n// I need to reorder the results to match the actual PLC. Brennen has\n// items 0-15 mapped to oplates and 16-31 mapped to packets\nfunction translate(deck_scan) {\n    let result = [];\n\n    // Gather the oplates at the beginning of the array\n    for (let i = 8; i < 24; i++) {\n        result.push(deck_scan[i]);\n    }\n\n    // Finally, gather the packets\n    for (let i = 0; i < 8; i++) {\n        result.push(deck_scan[i]);\n    }\n\n    for (let i = 24; i < 32; i++) {\n        result.push(deck_scan[i]);\n    }\n\n    return result;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "c0316ca7c80a43b4"
+            ]
+        ]
+    },
+    {
+        "id": "28f091b67bf73256",
+        "type": "mqtt out",
+        "z": "42d923d8b21fcd62",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c0316ca7c80a43b4",
+        "type": "split",
+        "z": "42d923d8b21fcd62",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 950,
+        "y": 240,
+        "wires": [
+            [
+                "e6a755bc1df2923b"
+            ]
+        ]
+    },
+    {
+        "id": "e62016551985ae18",
+        "type": "debug",
+        "z": "42d923d8b21fcd62",
+        "name": "Deck_Scan_Result debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5756ff5253931a4c",
+        "type": "inject",
+        "z": "42d923d8b21fcd62",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "4aa8ade815831979"
+            ]
+        ]
+    },
+    {
+        "id": "673a76edb4b49925",
+        "type": "link in",
+        "z": "42d923d8b21fcd62",
+        "name": "Deck Scan",
+        "links": [
+            "41b8ef221a93724d"
+        ],
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "4aa8ade815831979"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "4aa8ade815831979",
+        "type": "change",
+        "z": "42d923d8b21fcd62",
+        "name": "Initialize flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "numberOfMessages",
+                "pt": "flow",
+                "to": "32",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "dataRequested",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "c4b3e92b462d84ed"
+            ]
+        ]
+    },
+    {
+        "id": "6957cf61394acac1",
+        "type": "function",
+        "z": "42d923d8b21fcd62",
+        "name": "Send Deck_Scan.Complete after final message",
+        "func": "let dataRequested = flow.get('dataRequested');\nlet numberOfMessages = flow.get('numberOfMessages')\n\nif (dataRequested && numberOfMessages == 0) {\n    flow.set('dataRequested', false);\n    \n    msg.payload = {\n        tag: 'Deck_Scan.Complete',\n        value: true\n    };\n\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "8b58af32e5d3918f",
+                "63ad36a3df199056"
+            ]
+        ]
+    },
+    {
+        "id": "8b58af32e5d3918f",
+        "type": "debug",
+        "z": "42d923d8b21fcd62",
+        "name": "Deck_Scan.Complete debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e6a755bc1df2923b",
+        "type": "delay",
+        "z": "42d923d8b21fcd62",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1120,
+        "y": 240,
+        "wires": [
+            [
+                "2f1cb2a3e5448d37",
+                "e62016551985ae18"
+            ]
+        ]
+    },
+    {
+        "id": "26769b51f2b47d60",
+        "type": "inject",
+        "z": "42d923d8b21fcd62",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "6957cf61394acac1"
+            ]
+        ]
+    },
+    {
+        "id": "2f1cb2a3e5448d37",
+        "type": "function",
+        "z": "42d923d8b21fcd62",
+        "name": "Decrement message counter",
+        "func": "let numberOfMessages = flow.get('numberOfMessages')\n\nnumberOfMessages--;\n\nflow.set('numberOfMessages', numberOfMessages);\n\n// Empty string to NOSCAN like Brennen is doing\nif (msg.payload.value == undefined || msg.payload.value == null || msg.payload.value.trim() == '') {\n    msg.payload.value = 'NOSCAN';\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 240,
+        "wires": [
+            [
+                "28f091b67bf73256"
+            ]
+        ]
+    },
+    {
+        "id": "63ad36a3df199056",
+        "type": "mqtt out",
+        "z": "42d923d8b21fcd62",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 800,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "18868cbc1ef2d672",
+        "type": "function",
+        "z": "36578b036ea1cf17",
+        "name": "Gather info from PLC state and send the results",
+        "func": "let helper = global.get('Helper');\nlet state = global.get('state');\nlet numberOfMessages = flow.get('numberOfMessages');\n\nlet response = [];\n\nfor (let i = 0; i < numberOfMessages; i++) {\n    let result = state.Tray_Scan_Results[i];\n\n    if (result == undefined || result == null || result.trim() == '') {\n        result = 'NOSCAN';\n    }\n\n    response.push({\n        tag: `Tray_Scan_Results[${i}]`,\n        value: result\n    });\n}\nmsg.payload = response;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "7d75e7ea33ded250"
+            ]
+        ]
+    },
+    {
+        "id": "87cc61c1fc2bfe8e",
+        "type": "mqtt out",
+        "z": "36578b036ea1cf17",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7d75e7ea33ded250",
+        "type": "split",
+        "z": "36578b036ea1cf17",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 950,
+        "y": 240,
+        "wires": [
+            [
+                "7e085a9cf93fb011"
+            ]
+        ]
+    },
+    {
+        "id": "edaa2f03b1ef9c10",
+        "type": "debug",
+        "z": "36578b036ea1cf17",
+        "name": "Tray_Scan_Result debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0233dc9f5f818cee",
+        "type": "inject",
+        "z": "36578b036ea1cf17",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "cf15476cca063a08"
+            ]
+        ]
+    },
+    {
+        "id": "a3e539314bdd7766",
+        "type": "link in",
+        "z": "36578b036ea1cf17",
+        "name": "Tray Scan",
+        "links": [
+            "5ba10cbf7a0f7acb"
+        ],
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "cf15476cca063a08"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "cf15476cca063a08",
+        "type": "change",
+        "z": "36578b036ea1cf17",
+        "name": "Initialize flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "numberOfMessages",
+                "pt": "flow",
+                "to": "25",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "dataRequested",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "18868cbc1ef2d672"
+            ]
+        ]
+    },
+    {
+        "id": "c009af68668b512a",
+        "type": "function",
+        "z": "36578b036ea1cf17",
+        "name": "Send Tray_Scan.Complete after final message",
+        "func": "let dataRequested = flow.get('dataRequested');\nlet numberOfMessages = flow.get('numberOfMessages')\n\nif (dataRequested && numberOfMessages == 0) {\n    flow.set('dataRequested', false);\n    \n    msg.payload = {\n        tag: 'Tray_Scan.Complete',\n        value: true\n    };\n\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "9f1e471a698d225a",
+                "2428e541d5790e11"
+            ]
+        ]
+    },
+    {
+        "id": "9f1e471a698d225a",
+        "type": "debug",
+        "z": "36578b036ea1cf17",
+        "name": "Tray_Scan.Complete debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7e085a9cf93fb011",
+        "type": "delay",
+        "z": "36578b036ea1cf17",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1120,
+        "y": 240,
+        "wires": [
+            [
+                "31d674a95bc44be9",
+                "edaa2f03b1ef9c10"
+            ]
+        ]
+    },
+    {
+        "id": "787e70c56693af87",
+        "type": "inject",
+        "z": "36578b036ea1cf17",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 340,
+        "wires": [
+            [
+                "c009af68668b512a"
+            ]
+        ]
+    },
+    {
+        "id": "31d674a95bc44be9",
+        "type": "function",
+        "z": "36578b036ea1cf17",
+        "name": "Decrement message counter",
+        "func": "let numberOfMessages = flow.get('numberOfMessages')\n\nnumberOfMessages--;\n\nflow.set('numberOfMessages', numberOfMessages);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 240,
+        "wires": [
+            [
+                "87cc61c1fc2bfe8e"
+            ]
+        ]
+    },
+    {
+        "id": "2428e541d5790e11",
+        "type": "mqtt out",
+        "z": "36578b036ea1cf17",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 800,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3fc2e96d690fc2d7",
+        "type": "link in",
+        "z": "3cc20f02e8d2c2e6",
+        "name": "Load Tray",
+        "links": [
+            "b075ebe43837edb1"
+        ],
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "9d90c7144703ada2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "9d90c7144703ada2",
+        "type": "function",
+        "z": "3cc20f02e8d2c2e6",
+        "name": "Succeed or fail based on options selected in the UI",
+        "func": "/*\nI need to think of something fancy for handling Complete messages. Perhaps I\ncould add something to the UI to indicate that a complete message should\nalways be sent back, never sent back, or sometimes sent back (with a percent\nchance).\n*/\n\nmsg.payload = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "d1c1fe12c88eefc2"
+            ]
+        ]
+    },
+    {
+        "id": "d1c1fe12c88eefc2",
+        "type": "function",
+        "z": "3cc20f02e8d2c2e6",
+        "name": "Send Load_Tray.Complete back",
+        "func": "msg.payload = {\n    variable: 'Load_Tray.Complete',\n    value: true\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 340,
+        "wires": [
+            [
+                "b83973015b702dc2"
+            ]
+        ]
+    },
+    {
+        "id": "b83973015b702dc2",
+        "type": "mqtt out",
+        "z": "3cc20f02e8d2c2e6",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1160,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fb5e1b1f35bbf64b",
+        "type": "link in",
+        "z": "17d50da074fa0d1b",
+        "name": "Pick Front",
+        "links": [
+            "7290600829dd1bcb"
+        ],
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "a3556fb1ea0fe9a4"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "544f93d736528616",
+        "type": "link in",
+        "z": "17d50da074fa0d1b",
+        "name": "Pick Rear",
+        "links": [
+            "061cfef30a89e19f"
+        ],
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "8fe0691930b18896"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a3556fb1ea0fe9a4",
+        "type": "function",
+        "z": "17d50da074fa0d1b",
+        "name": "Succeed or fail based on options selected in the UI",
+        "func": "/*\nI need to think of something fancy for handling Complete messages. Perhaps I\ncould add something to the UI to indicate that a complete message should\nalways be sent back, never sent back, or sometimes sent back (with a percent\nchance).\n*/\n\nmsg.payload = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "0daaa28b9b3934a5"
+            ]
+        ]
+    },
+    {
+        "id": "0daaa28b9b3934a5",
+        "type": "function",
+        "z": "17d50da074fa0d1b",
+        "name": "Send Pick_Front.Complete back",
+        "func": "msg.payload = {\n    variable: 'Pick_Front.Complete',\n    value: true\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 240,
+        "wires": [
+            [
+                "c40edde030022143"
+            ]
+        ]
+    },
+    {
+        "id": "c40edde030022143",
+        "type": "mqtt out",
+        "z": "17d50da074fa0d1b",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1060,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8fe0691930b18896",
+        "type": "function",
+        "z": "17d50da074fa0d1b",
+        "name": "Succeed or fail based on options selected in the UI",
+        "func": "/*\nI need to think of something fancy for handling Complete messages. Perhaps I\ncould add something to the UI to indicate that a complete message should\nalways be sent back, never sent back, or sometimes sent back (with a percent\nchance).\n*/\n\nmsg.payload = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "26c169c5ba12ce57"
+            ]
+        ]
+    },
+    {
+        "id": "26c169c5ba12ce57",
+        "type": "function",
+        "z": "17d50da074fa0d1b",
+        "name": "Send Pick_Rear.Complete back",
+        "func": "msg.payload = {\n    variable: 'Pick_Rear.Complete',\n    value: true\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "8c6e146223628a38"
+            ]
+        ]
+    },
+    {
+        "id": "8c6e146223628a38",
+        "type": "mqtt out",
+        "z": "17d50da074fa0d1b",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1060,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1358cbe3cb36e1c6",
+        "type": "link in",
+        "z": "9b601b230aa127b3",
+        "name": "Drop Front",
+        "links": [
+            "2f0966d2dcef0494"
+        ],
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "543fd3b237e72517"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "44c3d9465573a9d2",
+        "type": "link in",
+        "z": "9b601b230aa127b3",
+        "name": "Drop Rear",
+        "links": [
+            "572d72dfc9695cde"
+        ],
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "3492202b6bb443db"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "543fd3b237e72517",
+        "type": "function",
+        "z": "9b601b230aa127b3",
+        "name": "Succeed or fail based on options selected in the UI",
+        "func": "/*\nI need to think of something fancy for handling Complete messages. Perhaps I\ncould add something to the UI to indicate that a complete message should\nalways be sent back, never sent back, or sometimes sent back (with a percent\nchance).\n*/\n\nmsg.payload = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "3cb57d0e2ec34c94"
+            ]
+        ]
+    },
+    {
+        "id": "3cb57d0e2ec34c94",
+        "type": "function",
+        "z": "9b601b230aa127b3",
+        "name": "Send Drop_Front.Complete back",
+        "func": "msg.payload = {\n    variable: 'Drop_Front.Complete',\n    value: true\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [
+                "8cfac9b746b26bf0"
+            ]
+        ]
+    },
+    {
+        "id": "8cfac9b746b26bf0",
+        "type": "mqtt out",
+        "z": "9b601b230aa127b3",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1080,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3492202b6bb443db",
+        "type": "function",
+        "z": "9b601b230aa127b3",
+        "name": "Succeed or fail based on options selected in the UI",
+        "func": "/*\nI need to think of something fancy for handling Complete messages. Perhaps I\ncould add something to the UI to indicate that a complete message should\nalways be sent back, never sent back, or sometimes sent back (with a percent\nchance).\n*/\n\nmsg.payload = true;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "2f7fcf57525e125b"
+            ]
+        ]
+    },
+    {
+        "id": "2f7fcf57525e125b",
+        "type": "function",
+        "z": "9b601b230aa127b3",
+        "name": "Send Drop_Rear.Complete back",
+        "func": "msg.payload = {\n    variable: 'Drop_Rear.Complete',\n    value: true\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "a265337ad944ebcd"
+            ]
+        ]
+    },
+    {
+        "id": "a265337ad944ebcd",
+        "type": "mqtt out",
+        "z": "9b601b230aa127b3",
+        "name": "",
+        "topic": "plc/messages",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e5c8447e200f995a",
+        "x": 1060,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "483b2f33d1d7f095",
+        "type": "tcp out",
+        "z": "1c0b9cdec90bfaf5",
+        "d": true,
+        "name": "Set to reply mode",
+        "host": "",
+        "port": "",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 1250,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "dd52db2494ac6257",
+        "type": "tcp in",
+        "z": "1c0b9cdec90bfaf5",
+        "d": true,
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "8003",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 760,
+        "y": 160,
+        "wires": [
+            [
+                "0aa04ed5fdfe6d52",
+                "2403ac7f2cdbd79f"
+            ]
+        ]
+    },
+    {
+        "id": "e7acc6a2e4ada3a4",
+        "type": "tcp request",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "",
+        "server": "localhost",
+        "port": "8003",
+        "out": "time",
+        "ret": "string",
+        "splitc": "0",
+        "newline": "",
+        "trim": false,
+        "tls": "",
+        "x": 970,
+        "y": 640,
+        "wires": [
+            [
+                "f26a7c4ac06f4477"
+            ]
+        ]
+    },
+    {
+        "id": "73041a5bdabd413a",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Tray_Scan.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Tray_Scan.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "9027c4a0401aaf65"
+            ]
+        ]
+    },
+    {
+        "id": "f26a7c4ac06f4477",
+        "type": "debug",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "tcp request debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "0aa04ed5fdfe6d52",
+        "type": "debug",
+        "z": "1c0b9cdec90bfaf5",
+        "d": true,
+        "name": "tcp in debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2403ac7f2cdbd79f",
+        "type": "function",
+        "z": "1c0b9cdec90bfaf5",
+        "d": true,
+        "name": "Update payload for the response",
+        "func": "msg.payload = `Received: ${msg.payload}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 160,
+        "wires": [
+            [
+                "483b2f33d1d7f095"
+            ]
+        ]
+    },
+    {
+        "id": "94e52ecd265d04fe",
+        "type": "function",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Convert msg to JSON string",
+        "func": "msg.payload = JSON.stringify(msg);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "e7acc6a2e4ada3a4"
+            ]
+        ]
+    },
+    {
+        "id": "5d29085c515b45c8",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Deck_Scan.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Deck_Scan.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "9027c4a0401aaf65"
+            ]
+        ]
+    },
+    {
+        "id": "ffcdddea1dd825fa",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Load_Tray.Load_Slot",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Load_Tray.Load_Slot",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "12",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 260,
+        "y": 380,
+        "wires": [
+            [
+                "a119d14d560214f7"
+            ]
+        ]
+    },
+    {
+        "id": "23cc0ab492427324",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Load_Tray.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Load_Tray.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 420,
+        "wires": [
+            [
+                "a119d14d560214f7"
+            ]
+        ]
+    },
+    {
+        "id": "a91a28436c114242",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Pick_Front.Tray_Area",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Pick_Front.Tray_Area",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "11",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "618dc0248fe69890"
+            ]
+        ]
+    },
+    {
+        "id": "f76b714c4baa9647",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Pick_Front.Active_Nozzle",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Pick_Front.Active_Nozzle",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "555",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "618dc0248fe69890"
+            ]
+        ]
+    },
+    {
+        "id": "d0f6eef7ca0b6936",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Pick_Front.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Pick_Front.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 560,
+        "wires": [
+            [
+                "618dc0248fe69890"
+            ]
+        ]
+    },
+    {
+        "id": "89d2398be119381d",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Pick_Rear.Tray_Area",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Pick_Rear.Tray_Area",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "11",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 260,
+        "y": 620,
+        "wires": [
+            [
+                "32e9f841561e5913"
+            ]
+        ]
+    },
+    {
+        "id": "d7424cd0edb552d1",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Pick_Rear.Active_Nozzle",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Pick_Rear.Active_Nozzle",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "555",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 660,
+        "wires": [
+            [
+                "32e9f841561e5913"
+            ]
+        ]
+    },
+    {
+        "id": "30fde6f755cc73a8",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Pick_Rear.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Pick_Rear.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 700,
+        "wires": [
+            [
+                "32e9f841561e5913"
+            ]
+        ]
+    },
+    {
+        "id": "a7707b464185b7f4",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Drop_Front.Destination",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Drop_Front.Destination",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "11",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 260,
+        "y": 800,
+        "wires": [
+            [
+                "082f1d67afc93737"
+            ]
+        ]
+    },
+    {
+        "id": "09756a69f3d0f7a5",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Drop_Front.Active_Nozzle",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Drop_Front.Active_Nozzle",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "555",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "082f1d67afc93737"
+            ]
+        ]
+    },
+    {
+        "id": "72cf8803aa4afd87",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Drop_Front.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Drop_Front.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 840,
+        "wires": [
+            [
+                "082f1d67afc93737"
+            ]
+        ]
+    },
+    {
+        "id": "7a57f41f2c87aeaf",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Drop_Rear.Destination",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Drop_Rear.Destination",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "11",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 260,
+        "y": 940,
+        "wires": [
+            [
+                "5832c22f28f8b166"
+            ]
+        ]
+    },
+    {
+        "id": "ad2fc3c59be97a1a",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Drop_Rear.Active_Nozzle",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Drop_Rear.Active_Nozzle",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "555",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "5832c22f28f8b166"
+            ]
+        ]
+    },
+    {
+        "id": "3b9d39dc354bbeaf",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Drop_Rear.Request",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Drop_Rear.Request",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 250,
+        "y": 980,
+        "wires": [
+            [
+                "5832c22f28f8b166"
+            ]
+        ]
+    },
+    {
+        "id": "1591493433fbabee",
+        "type": "tcp in",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "8003",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 760,
+        "y": 260,
+        "wires": [
+            [
+                "0a79b650c6504a29",
+                "abcca872f53fa65b"
+            ]
+        ]
+    },
+    {
+        "id": "0a79b650c6504a29",
+        "type": "function",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Parse payload into meaningful properties",
+        "func": "let helper = global.get('Helper');\nlet state = global.get('state');\n\nlet obj = JSON.parse(msg.payload);\n\nnode.warn({... obj})\n\n// setProperty(state, obj.tag, obj.value);\n// setProperty(obj.variable, obj.payload);\n\nupdateState(obj.tag, obj.value);\n\nreturn msg;\n\nfunction updateState(tag, value) {\n    // Update the state object based on the tag\n    let keys = tag.split('.');\n    let currentState = state;\n    for (let j = 0; j < keys.length - 1; j++) {\n        currentState = currentState[keys[j]];\n    }\n\n    let propertyName = keys[keys.length - 1];\n    node.warn(propertyName);\n    \n    if (!currentState.hasOwnProperty(propertyName)) {\n        helper.error(node, `Property not found in global state: ${tag}`);\n        return;\n    }\n    \n    currentState[propertyName] = value;\n    helper.info(node, `Property [${tag}] updated to ${value}`);\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abcca872f53fa65b",
+        "type": "debug",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d9ce089a4a26934c",
+        "type": "inject",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "Does not exist",
+        "props": [
+            {
+                "p": "tag",
+                "v": "Does not exist",
+                "vt": "str"
+            },
+            {
+                "p": "value",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "04b734e37754ac59"
+            ]
+        ]
+    }
+]
