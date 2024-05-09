@@ -87,11 +87,11 @@
         "in": [],
         "out": [
             {
-                "x": 560,
-                "y": 180,
+                "x": 540,
+                "y": 160,
                 "wires": [
                     {
-                        "id": "ad348a4576b60be8",
+                        "id": "95872fcb7aabcdca",
                         "port": 0
                     }
                 ]
@@ -100,9 +100,10 @@
         "env": [],
         "meta": {},
         "color": "#DDAA99",
+        "icon": "font-awesome/fa-sign-in",
         "status": {
             "x": 280,
-            "y": 120,
+            "y": 80,
             "wires": [
                 {
                     "id": "bdf6a1794fb0abfa",
@@ -233,7 +234,7 @@
         "name": "",
         "scope": null,
         "x": 160,
-        "y": 120,
+        "y": 80,
         "wires": [
             []
         ]
@@ -242,6 +243,7 @@
         "id": "d260ef522b154577",
         "type": "mqtt in",
         "z": "331ad38c4394de9c",
+        "d": true,
         "name": "",
         "topic": "plc/messages",
         "qos": "2",
@@ -252,7 +254,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 170,
-        "y": 180,
+        "y": 340,
         "wires": [
             [
                 "ad348a4576b60be8"
@@ -263,6 +265,7 @@
         "id": "ad348a4576b60be8",
         "type": "function",
         "z": "331ad38c4394de9c",
+        "d": true,
         "name": "Save input to global state",
         "func": "let helper = global.get('Helper')\nlet plc = global.get('plc');\n\nhelper.info(node, `Last message type received: ${msg.payload.tag}`);\nplc[msg.topic] = msg.payload;\n\nreturn msg;",
         "outputs": 1,
@@ -272,7 +275,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 180,
+        "y": 340,
         "wires": [
             []
         ]
@@ -284,7 +287,7 @@
         "name": "",
         "server": "server",
         "host": "",
-        "port": "8003",
+        "port": "44818",
         "datamode": "stream",
         "datatype": "utf8",
         "newline": "",
@@ -293,7 +296,7 @@
         "base64": false,
         "tls": "",
         "x": 160,
-        "y": 300,
+        "y": 160,
         "wires": [
             [
                 "95872fcb7aabcdca",
@@ -305,16 +308,16 @@
         "id": "95872fcb7aabcdca",
         "type": "function",
         "z": "331ad38c4394de9c",
-        "name": "Parse payload into meaningful properties",
-        "func": "let helper = global.get('Helper');\nlet state = global.get('state');\n\nlet obj = JSON.parse(msg.payload);\n\nnode.warn({... obj})\n\n// setProperty(state, obj.tag, obj.value);\n// setProperty(obj.variable, obj.payload);\n\nupdateState(obj.tag, obj.value);\n\nreturn msg;\n\nfunction updateState(tag, value) {\n    // Update the state object based on the tag\n    let keys = tag.split('.');\n    let currentState = state;\n    for (let j = 0; j < keys.length - 1; j++) {\n        currentState = currentState[keys[j]];\n    }\n\n    let propertyName = keys[keys.length - 1];\n    node.warn(propertyName);\n    \n    if (!currentState.hasOwnProperty(propertyName)) {\n        helper.error(node, `Property not found in global state: ${tag}`);\n        return;\n    }\n    \n    currentState[propertyName] = value;\n    helper.info(node, `Property [${tag}] updated to ${value}`);\n}",
+        "name": "Save input to global state",
+        "func": "let helper = global.get('Helper');\nlet state = global.get('state');\n\ntry {\n    let obj = JSON.parse(msg.payload);\n\n    node.warn({... obj})\n\n    updateState(obj.variable, obj.value);\n}\ncatch {\n}\n\nreturn msg;\n\nfunction updateState(tag, value) {\n    // Update the state object based on the tag\n    let keys = tag.split('.');\n    let currentState = state;\n    for (let j = 0; j < keys.length - 1; j++) {\n        currentState = currentState[keys[j]];\n    }\n\n    let propertyName = keys[keys.length - 1];\n    node.warn(propertyName);\n    \n    if (!currentState.hasOwnProperty(propertyName)) {\n        helper.error(node, `Property not found in global state: ${tag}`);\n        return;\n    }\n    \n    currentState[propertyName] = value;\n    helper.info(node, `Property [${tag}] updated to ${value}`);\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 300,
+        "x": 370,
+        "y": 160,
         "wires": [
             []
         ]
@@ -323,7 +326,7 @@
         "id": "753c7543e10a190e",
         "type": "debug",
         "z": "331ad38c4394de9c",
-        "name": "debug 10",
+        "name": "plc in debug",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -332,8 +335,29 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
-        "y": 360,
+        "x": 330,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0c215e4666e52fc8",
+        "type": "comment",
+        "z": "331ad38c4394de9c",
+        "name": "This assumes that there is a variable property that holds the PLC tag name and a value property that holds the new value",
+        "info": "",
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "94c807f0901e0948",
+        "type": "comment",
+        "z": "331ad38c4394de9c",
+        "d": true,
+        "name": "This can either be reworked, or discarded",
+        "info": "",
+        "x": 260,
+        "y": 300,
         "wires": []
     },
     {
@@ -390,7 +414,7 @@
         "type": "function",
         "z": "f6f2187d.f17ca8",
         "name": "Define State class",
-        "func": "let helper = global.get('Helper');\nlet library = global.get(\"Library\") || {};\n\nclass State {\n    constructor() {\n        this.Deck_Scan = {\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n        this.Deck_Scan_Results = Array(32).fill('');\n\n        this.Tray_Scan = {\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n        this.Tray_Scan_Results = Array(25).fill('');\n\n        this.Load_Tray = {\n            Load_Slot: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Pick_Front = {\n            Tray_Area: -1,\n            Active_Nozzle: 0,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Pick_Rear = {\n            Tray_Area: -1,\n            Active_Nozzle: 0,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Drop_Front = {\n            Active_Nozzle: 0,\n            Destination: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        }\n\n        this.Drop_Rear = {\n            Active_Nozzle: 0,\n            Destination: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        }\n    }\n\n    toString() {\n        return {... this};\n    }\n}\n\nlibrary.State = State;\nglobal.set(\"Library\", library);\n\nhelper.info(node, 'State class setup okay');\nreturn msg;",
+        "func": "let helper = global.get('Helper');\nlet library = {};\n\nclass State {\n    constructor() {\n        this.Deck_Scan = {\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n        this.Deck_Scan_Results = Array(32).fill('');\n\n        this.Tray_Scan = {\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n        this.Tray_Scan_Results = Array(25).fill('');\n\n        this.Load_Tray = {\n            Load_Slot: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Pick_Front = {\n            Tray_Area: -1,\n            Active_Nozzle: 0,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Pick_Rear = {\n            Tray_Area: -1,\n            Active_Nozzle: 0,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        };\n\n        this.Drop_Front = {\n            Active_Nozzle: 0,\n            Destination: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        }\n\n        this.Drop_Rear = {\n            Active_Nozzle: 0,\n            Destination: -1,\n            Request: false,\n            Acknowledge: false,\n            Complete: false\n        }\n    }\n\n    toString() {\n        return {... this};\n    }\n}\n\nlibrary.State = State;\nglobal.set(\"Library\", library);\n\nhelper.info(node, 'State class setup okay');\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1229,6 +1253,7 @@
         "id": "1591493433fbabee",
         "type": "tcp in",
         "z": "1c0b9cdec90bfaf5",
+        "d": true,
         "name": "",
         "server": "server",
         "host": "",
@@ -1253,6 +1278,7 @@
         "id": "0a79b650c6504a29",
         "type": "function",
         "z": "1c0b9cdec90bfaf5",
+        "d": true,
         "name": "Parse payload into meaningful properties",
         "func": "let helper = global.get('Helper');\nlet state = global.get('state');\n\nlet obj = JSON.parse(msg.payload);\n\nnode.warn({... obj})\n\n// setProperty(state, obj.tag, obj.value);\n// setProperty(obj.variable, obj.payload);\n\nupdateState(obj.tag, obj.value);\n\nreturn msg;\n\nfunction updateState(tag, value) {\n    // Update the state object based on the tag\n    let keys = tag.split('.');\n    let currentState = state;\n    for (let j = 0; j < keys.length - 1; j++) {\n        currentState = currentState[keys[j]];\n    }\n\n    let propertyName = keys[keys.length - 1];\n    node.warn(propertyName);\n    \n    if (!currentState.hasOwnProperty(propertyName)) {\n        helper.error(node, `Property not found in global state: ${tag}`);\n        return;\n    }\n    \n    currentState[propertyName] = value;\n    helper.info(node, `Property [${tag}] updated to ${value}`);\n}",
         "outputs": 1,
@@ -1271,6 +1297,7 @@
         "id": "abcca872f53fa65b",
         "type": "debug",
         "z": "1c0b9cdec90bfaf5",
+        "d": true,
         "name": "debug 9",
         "active": true,
         "tosidebar": true,
@@ -1313,6 +1340,52 @@
                 "04b734e37754ac59"
             ]
         ]
+    },
+    {
+        "id": "3c9a642f00bc53c2",
+        "type": "subflow:331ad38c4394de9c",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "",
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "9024632a66f3687b",
+                "f1ee294416062ebb"
+            ]
+        ]
+    },
+    {
+        "id": "9024632a66f3687b",
+        "type": "tcp out",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "",
+        "host": "",
+        "port": "",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "tls": "",
+        "x": 910,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f1ee294416062ebb",
+        "type": "debug",
+        "z": "1c0b9cdec90bfaf5",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 500,
+        "wires": []
     },
     {
         "id": "c113b471685c62d5",
